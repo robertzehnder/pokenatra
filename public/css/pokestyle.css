@@ -53,6 +53,11 @@ a:hover {
   border-bottom-color: rgba(225, 225, 225, .5);
 }
 
+.containerize {
+  width: 50%;
+  margin: 0 auto;
+}
+
 @keyframes pulse {
   0% {
     text-shadow: 4px 4px 3px rgba(255, 255, 255, .3);
