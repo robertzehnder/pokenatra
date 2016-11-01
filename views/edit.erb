@@ -1,8 +1,0 @@
-<form action="/allPokemon/edit/<%= @pokemon.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
-  <input type="text" name="name" value="<%= @pokemon.name %>">
-  <input type="text" name="poke_type" value="<%= @pokemon.poke_type %>">
-  <input type="text" name="cp" value="<%= @pokemon.cp %>">
-  <input type="text" name="img_url" value="<%= @pokemon.img_url %>">
-  <p><input type="submit" name="save" value="Save Changes"></p>
-</form>

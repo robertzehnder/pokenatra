@@ -1,0 +1,21 @@
+<h1>All the Trainers!</h1>
+<% @trainers.each do |trainer| %>
+  <p>Name: <%= trainer.name %></p>
+  <p>Level: <%= trainer.level %></p>
+
+  <form action="/trainers/<%= trainer.id %>/pokemon" method="get">
+    <p><input type="submit" name="edit" value="View Pokemon"></p>
+  </form>
+
+  <form action="/trainers/<%= trainer.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <p><input type="submit" name="delete" value="Delete Trainer"></p>
+  </form>
+
+  <form action="/trainers/<%= trainer.id %>" method="get">
+    <p><input type="submit" name="edit" value="Edit Trainer"></p>
+  </form>
+
+  <p><img src="<%= trainer.img_url %>" alt="<%= trainer.name %>" /></p>
+
+  <% end %>

@@ -3,6 +3,7 @@
   <p>Name: <%= mon.name %></p>
   <p>Type: <%= mon.poke_type %></p>
   <p>CP: <%= mon.cp %></p>
+  <p>Trainer: <%= mon.trainer_id %></p>
   <form action="/allPokemon/<%= mon.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
     <p><input type="submit" name="delete" value="Delete Pokemon"></p>
