@@ -1,0 +1,14 @@
+<h1>All the Pokemon!</h1>
+<% @pokemon.each do |mon| %>
+  <p>Name: <%= mon.name %></p>
+  <p>Type: <%= mon.poke_type %></p>
+  <p>CP: <%= mon.cp %></p>
+  <form action="/allPokemon/<%= mon.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <p><input type="submit" name="delete" value="Delete Pokemon"></p>
+  </form>
+  <form action="/allPokemon/edit/<%= mon.id %>" method="get">
+    <p><input type="submit" name="edit" value="Edit Pokemon"></p>
+  </form>
+  <p><img src="<%= mon.img_url %>" alt="<%= mon.name %>" /></p>
+  <% end %>
